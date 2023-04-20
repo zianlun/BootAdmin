@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class IndexController {
 
-
     @GetMapping({"/","/login"})
     public String loginPage(){
         return "login";
@@ -33,7 +32,7 @@ public class IndexController {
         return "login";
     }
 
-    @GetMapping("/index.html")
+    @GetMapping("/index")
     public String indexPage(HttpSession session, Model model){
         if(!StringUtils.isEmpty((String)session.getAttribute("username"))){
             return "index";
@@ -41,6 +40,5 @@ public class IndexController {
         model.addAttribute("msg", "请先登录");
         return "/login";
     }
-
 
 }

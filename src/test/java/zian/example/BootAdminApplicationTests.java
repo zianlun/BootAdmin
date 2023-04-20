@@ -8,6 +8,7 @@ class BootAdminApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

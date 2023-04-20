@@ -13,6 +13,22 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class User {
+
+    private Integer userId;
+
     private String username;
+
     private String password;
+
+    private Integer age;
+
+    private String phone;
+
+    private String gender;
+
+     public User( String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
 }

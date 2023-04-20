@@ -8,3 +8,18 @@ spring:
   web:
     resources:
       static-locations: classpath:/static/
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/admin?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&useTimezone=true&autoReconnect=true&useLegacyDatetimeCode=false&useSSL=false #mmctzfe.uicp.net:33842
+    username: root
+    password: 123456
+    #    url: jdbc:mysql://122.112.173.218:3306/meter_iot_v2?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&useTimezone=true&autoReconnect=true
+    #    username: smartmeter
+    #    password: qinhua@2020smartmeter
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter: # 监控web
+        enabled: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
